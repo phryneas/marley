@@ -45,6 +45,7 @@ module.exports = class IniElement {
         if (allSettings.loadSave.joomla.escapeQuotes) {
             ret = ret.replace(/"(_QQ_")+/g, '"')
         }
+        ret = ret.replace(/'"'"'/g, "'")
         ret = ret.replace(/\\n/g, "\n"); // \n to real newline
 
         return ret;

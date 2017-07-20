@@ -8,7 +8,7 @@ const $ = require('jquery');
  */
 module.exports = class IniValue extends IniElement {
     static get regex() {
-        return /^\s*(.*?)="?(.*?)"?\s*$/;
+        return /^\s*(.*?)=['"]?(.*?)['"]?\s*$/;
     }
 
     constructor(name, value) {
